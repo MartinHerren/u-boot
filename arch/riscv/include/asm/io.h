@@ -85,6 +85,7 @@ static inline u16 readw(const volatile void __iomem *addr)
 	return val;
 }
 
+/* #define readl_relaxed readl */
 static inline u32 readl(const volatile void __iomem *addr)
 {
 	u32	val;
@@ -217,6 +218,7 @@ static inline u64 readq(const volatile void __iomem *addr)
 #define insb(p, d, l)			readsb(__io(p), d, l)
 #define insw(p, d, l)			readsw(__io(p), d, l)
 #define insl(p, d, l)			readsl(__io(p), d, l)
+#endif
 
 static inline void readsb(const volatile void __iomem *addr, void *data,
 			  unsigned int bytelen)
@@ -321,7 +323,6 @@ static inline void writesl(volatile void __iomem *addr, const void *data,
 #define writesw writesw
 #define writesl writesl
 
-#endif
 
 #define outb_p(val, port)		outb((val), (port))
 #define outw_p(val, port)		outw((val), (port))
