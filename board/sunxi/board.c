@@ -221,10 +221,6 @@ int board_init(void)
 	}
 #endif /* !CONFIG_ARM64 && !CONFIG_MACH_SUNIV */
 
-	ret = axp_gpio_init();
-	if (ret)
-		return ret;
-
 	eth_init_board();
 
 	return 0;
