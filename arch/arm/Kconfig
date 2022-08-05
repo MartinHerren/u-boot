@@ -1189,7 +1189,6 @@ config ARCH_SUNXI
 	select DM_I2C if I2C
 	select DM_SPI if SPI
 	select DM_SPI_FLASH if SPI && MTD
-	select DM_KEYBOARD
 	select DM_SERIAL
 	select MMU_PGPROT if ARM64
 	select OF_BOARD_SETUP
@@ -1204,7 +1203,6 @@ config ARCH_SUNXI
 	select SYS_NS16550
 	select SYS_THUMB_BUILD if !ARM64
 	select USB_KEYBOARD if DISTRO_DEFAULTS && USB_HOST
-	select USB_STORAGE if DISTRO_DEFAULTS && USB_HOST
 	select SPL_USE_TINY_PRINTF if SPL
 	select USE_PREBOOT
 	select SYS_RELOC_GD_ENV_ADDR
