@@ -1095,6 +1095,4 @@ config CHIP_DIP_SCAN
 	select W1_EEPROM_DS24XXX
 	select CMD_EXTENSION
 
-source "board/sunxi/Kconfig"
-
 endif
