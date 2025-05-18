@@ -30,7 +30,6 @@
 #define readl(x)       rv_readl((const volatile void __iomem *)(u64)(x))
 #define writel(v, x)   rv_writel(v, (volatile void __iomem *)(u64)(x))
 
-#include <common.h>
 #ifdef CONFIG_RAM
   #include <dm.h>
   #include <ram.h>
